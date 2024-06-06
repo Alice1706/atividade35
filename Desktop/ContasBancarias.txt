@@ -1,0 +1,24 @@
+Passo 1: Criação de um banco de dados Novo chamado 'controle_estoque'
+
+CREATE DATABASE controle_estoque;
+
+Passo 2: Criação da tabela de produtos com os campos id, nome e quantidade
+
+USE controle_estoque;
+CREATE TABLE produtos (id INT AUTO_INCREMENT PRIMARY KEY, nome VARCHAR(255) NOT NULL, quantidade INT NOT NULL);
+
+Passo 3: Inserção de 2 dados iniciais como Televisor com 10 quantidades e Refrigerador com 5 quantidades
+
+INSERT INTO produtos (nome, quantidade) VALUES ('Televisor', 10);
+INSERT INTO produtos (nome, quantidade) VALUES ('Refrigerador', 5);
+
+Passo 4: Início da transação para atualização de estoque {
+Passo 5: Venda de produtos
+-Tente vender 2 televisores e 1 refrigerador
+
+
+UPDATE contas_bancarias SET quantidade = quantidade - 2 WHERE Televisor = 'João Silva';
+
+UPDATE controle_estoque SET saldo = saldo - 500.00 WHERE titular = 'Televisor';
+
+
